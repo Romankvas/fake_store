@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Jquery -->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+
+     <!-- Font Awesome -->
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css' integrity='sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ==' crossorigin='anonymous'/>
+
+      <!-- Fonts Google -->
+       <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+
+       <!-- Axios -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.10.0/axios.min.js" integrity="sha512-WkZrEcQ5LMyNy6Y2PQf+Tu3vMcsmKKRKuPXtJSTHQJ3mpuvLRlA5dlDDhrrcXfyWr6Z/y3wIMfjfqVFO/gDZYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div class="chatButton"><i class="fa-solid fa-comment-dots"></i></div>
+  
+  <div class="chatWindows">
+    <div class="inputWindow">
+      <input type="text" placeholder="Напишіть повідомлення...">
+      <button><i class="fa-solid fa-paper-plane "></i></button>
+    </div>
+  </div>
+ <button class="openPopup">
+    <i class="fa-solid fa-xmark closePopup"></i>
+  </button>
+    <div class="cardPopup">
+        <div class="cardHeader">
+            <i id="xmark" class="fa-solid fa-xmark closePopup"></i>
+        </div>
+        <div class="cardMain"></div>
+<p class="totalAmount">Загальна сума: $<span id="total">0.00</span></p>
+      <button class="confirmOrderBtn">Підтвердити замовлення</button>
+        </div>
+
+   <div class="popupMessage">Товар додано до корзини</div>
+
+    <div class="wrap">
+        <!-- home Page -->
+        <div class="homePage">
+            <header>
+                <div class="logo">Fake Store</div>
+
+                <nav>
+                    <span>Home</span>
+                    <span>About</span>
+                    <span>Contact</span>
+                </nav>
+
+                <div class="controlls">
+                    <div class="card">
+                        <i class="fa-solid fa-card-shopping"></i>
+
+                        <div class="cardCount">0</div>
+                    </div>
+                </div>
+                
+            </header>
+        </div>
+        <!-- home Page END -->
+
+
+        <!-- product Page -->
+        <div class="productPage">
+            <h2>Product page</h2>
+            <div class="filterContainer">
+                <div class="categoryFilter">
+                    <select id="category">
+                        <option value="all">всі</option>
+                    </select>
+                    <div class="close"><i class="fa-solid fa-xmark"></i> </div>
+                </div>
+                   <div class="sortFilter">
+                  <select id="sort">
+                      <option value="default">Сортувати за замовчуванням</option>
+                      <option value="asc">Ціна: від меншої</option>
+                      <option value="desc">Ціна: від більшої</option>
+                  </select>
+              </div>
+            </div>
+
+            <div class="productContainer">
+                
+            </div>
+
+        </div>
+        <!-- product Page END -->
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
